@@ -15,13 +15,13 @@ Studi kasus ini membahas proses refactoring pada sistem validasi registrasi maha
 
 ## Kondisi Kode Sebelum Refactoring
 
-Pada tahap awal, seluruh aturan validasi ditempatkan di dalam satu class bernama `ValidatorManager`. Method `validate()` pada class tersebut bertugas untuk:
+Pada tahap awal, seluruh aturan validasi ditempatkan di dalam satu class yaitu, `ValidatorManager`. Method `validate()` pada class tersebut bertugas untuk:
 
 * Mengecek batas maksimal pengambilan SKS
 * Memastikan prasyarat mata kuliah telah terpenuhi
 * Mendeteksi kemungkinan bentrokan jadwal
 
-Pendekatan ini membuat satu class memiliki terlalu banyak tanggung jawab dan ketergantungan langsung terhadap detail aturan validasi.
+Pendekatan ini membuat satu class memiliki terlalu punya beban yang banyak dan ketergantungan langsung terhadap aturan validasi.
 
 ---
 
@@ -29,7 +29,7 @@ Pendekatan ini membuat satu class memiliki terlalu banyak tanggung jawab dan ket
 
 ### 1. Single Responsibility Principle (SRP)
 
-Class `ValidatorManager` menjalankan beberapa fungsi validasi sekaligus. Hal ini bertentangan dengan SRP karena satu class seharusnya hanya memiliki satu alasan untuk berubah.
+Class `ValidatorManager` menjalankan beberapa fungsi validasi secara sekaligus. Hal ini bertentangan dengan SRP,kenapa? karena satu class seharusnya hanya memiliki satu hal untuk berubah.
 
 ### 2. Open/Closed Principle (OCP)
 
@@ -69,9 +69,9 @@ Aturan validasi baru berupa `JadwalBentrokRule` dapat ditambahkan tanpa melakuka
 
 ## Refleksi
 
-Melalui tugas ini, penulis memahami bahwa penggunaan struktur `if/else` secara berlebihan dapat menyebabkan kode sulit dipelihara dan dikembangkan. Pada implementasi awal, setiap penambahan aturan validasi mengharuskan perubahan langsung pada class utama, sehingga berisiko menimbulkan kesalahan baru.
+Pada tugas ini, diharap bisa memahami bahwa penggunaan struktur `if/else` secara berlebihan dapat menyebabkan kode sulit dipelihara dan dikembangkan. Pada implementasi awal, setiap penambahan aturan validasi mengharuskan perubahan langsung pada class utama, sehingga berisiko menimbulkan kesalahan baru.
 
-Dengan menerapkan prinsip Dependency Injection, logika utama tidak lagi bergantung pada detail implementasi aturan validasi. Setiap aturan berdiri secara independen dan dapat ditambahkan atau dihapus tanpa memengaruhi struktur sistem secara keseluruhan. Pendekatan ini membuat kode lebih fleksibel, terstruktur, dan sesuai dengan konsep pemrograman berorientasi objek.
+Dengan menerapkan prinsip Dependency Injection, logika utama tidak lagi bergantung pada aturan (mendetail) validasi. Setiap aturan berdiri secara independen dan dapat ditambahkan atau dihapus tanpa memengaruhi struktur sistem secara keseluruhan. Pendekatan ini membuat kode lebih fleksibel, terstruktur, dan sesuai dengan konsep pemrograman berorientasi objek.
 
 Selain itu, pemisahan tanggung jawab ke dalam class yang lebih kecil membantu penulis memahami pentingnya desain yang modular. Refactoring ini menunjukkan bahwa penerapan prinsip SOLID tidak hanya bersifat teoritis, tetapi sangat berguna dalam pengembangan perangkat lunak yang berkelanjutan.
 
@@ -80,3 +80,4 @@ Selain itu, pemisahan tanggung jawab ke dalam class yang lebih kecil membantu pe
 ## Kesimpulan
 
 Melalui proses refactoring ini, sistem validasi registrasi mahasiswa menjadi lebih terstruktur, fleksibel, dan mudah dikembangkan. Penerapan prinsip SRP, OCP, dan DIP berhasil menghilangkan ketergantungan berlebih serta menghindari penggunaan `if/else` yang kompleks. Pendekatan ini juga memudahkan penambahan aturan validasi baru tanpa harus memodifikasi kode yang sudah ada.
+
