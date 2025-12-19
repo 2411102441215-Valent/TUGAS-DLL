@@ -92,7 +92,7 @@ Hasil validasi akan ditampilkan dalam bentuk **log di terminal**.
 
 ## Kesimpulan
 
-Melalui praktikum ini, saya mempelajari bagaimana menerapkan prinsip **SOLID** dalam pemrograman berorientasi objek serta pentingnya penggunaan **logging**.
+Melalui praktikum ini, dapat dipelajari bagaimana menerapkan prinsip **SOLID** dalam pemrograman berorientasi objek serta pentingnya penggunaan **logging**.
 
 Hasil refactoring membuat program menjadi:
 
@@ -100,9 +100,10 @@ Hasil refactoring membuat program menjadi:
 * Mudah dikembangkan ke depannya
 * Lebih sesuai dengan konsep PBO yang baik
 
-Praktikum ini diharapkan dapat membantu pemahaman saya dalam menulis kode yang lebih profesional dan maintainable.
+Praktikum ini juga diharapkan dapat membantu pemahaman saya dalam menulis kode yang lebih profesional dan maintainable.
 
 ---
 
 📚 Repository ini dibuat sebagai bagian dari **tugas praktikum mata kuliah Pemrograman Berorientasi Objek (PBO)**.
+
 
