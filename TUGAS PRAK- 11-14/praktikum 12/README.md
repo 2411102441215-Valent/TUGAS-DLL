@@ -1,5 +1,11 @@
 # Praktikum PBO – Refactoring SOLID & Logging
 
+* **Nama**: Nikon Valent Sakaesa
+* **NIM**: 2411102441215
+* **Kelas**: C
+* **Mata Kuliah**: Praktikum Pemrograman Berorientasi Objek (PBO)
+
+---
 ## Deskripsi
 
 Repository ini berisi hasil **praktikum Pemrograman Berorientasi Objek (PBO)** yang membahas proses **refactoring kode** dengan menerapkan prinsip **SOLID** serta penggunaan **logging**.
@@ -98,3 +104,4 @@ Praktikum ini diharapkan dapat membantu pemahaman saya dalam menulis kode yang l
 ---
 
 📚 Repository ini dibuat sebagai bagian dari **tugas praktikum mata kuliah Pemrograman Berorientasi Objek (PBO)**.
+
